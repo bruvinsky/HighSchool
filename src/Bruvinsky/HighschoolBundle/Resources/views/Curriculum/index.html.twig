@@ -1,0 +1,66 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Список учебных планов</h1>
+
+    {# total items count #}
+    <div class="count">
+        Всего:
+        {{ pagination.getTotalItemCount }}
+    </div>
+    {##}
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Специальность</th>
+                <th>Предмет</th>
+                <th>Лекции, ч.</th>
+                <th>Практические, ч.</th>
+                <th>Лаюораторные, ч.</th>
+                <th>Экзамены, ед.</th>
+                <th>Семестры, ед.</th>
+                <th>Контрольные, ед.</th>
+                <th>Колоквиумы, ед</th>
+                <th>Действие</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in pagination %}
+            <tr>
+                <td><a href="{{ path('curriculum_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.idSpecialtyCur }}</td>
+                <td>{{ entity.idSubjectCur }}</td>
+                <td>{{ entity.lecture }}</td>
+                <td>{{ entity.practical }}</td>
+                <td>{{ entity.lab }}</td>
+                <td>{{ entity.exam }}</td>
+                <td>{{ entity.semester }}</td>
+                <td>{{ entity.test }}</td>
+                <td>{{ entity.quiz }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('curriculum_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {##}
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
+    {##}
+
+        <ul>
+        <li>
+            <a href="{{ path('curriculum_new') }}">
+                Создать новый учебный план
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

@@ -1,0 +1,52 @@
+Bruvinsky\HighschoolBundle\Entity\City:
+    type: entity
+    table: city
+    indexes:
+        IDX_2D5B02342955449B:
+            columns:
+                - id_region
+    id:
+        id:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 0
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        name:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+        phoneCode:
+            type: string
+            nullable: true
+            length: 7
+            options:
+                fixed: false
+            column: phone_code
+    manyToOne:
+        idRegion:
+            targetEntity: Region
+            cascade: {  }
+            fetch: LAZY
+            inversedBy: cities
+            joinColumns:
+                id_region:
+                    referencedColumnName: id
+            orphanRemoval: false
+    oneToMany:
+            uniescities:
+                targetEntity: Uni
+                cascade: {  }
+                fetch: LAZY
+                mappedBy: idCityUni
+            studentscities:
+                targetEntity: Student
+                cascade: {  }
+                fetch: LAZY
+                mappedBy: idCityStudent
+    lifecycleCallbacks: {  }

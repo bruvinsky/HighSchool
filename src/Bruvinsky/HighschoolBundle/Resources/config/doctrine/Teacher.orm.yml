@@ -1,0 +1,52 @@
+Bruvinsky\HighschoolBundle\Entity\Teacher:
+    type: entity
+    table: teacher
+    indexes:
+        IDX_B0F6A6D56897615D:
+            columns:
+                - id_department
+        IDX_B0F6A6D52553970A:
+            columns:
+                - id_subject
+    id:
+        id:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 0
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        name:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+    manyToOne:
+        idDepartment:
+            targetEntity: Department
+            cascade: {  }
+            fetch: LAZY
+            inversedBy: teachers_d
+            joinColumns:
+                id_department:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idSubject:
+            targetEntity: Subject
+            cascade: {  }
+            fetch: LAZY
+            inversedBy: teacher_s
+            joinColumns:
+                id_subject:
+                    referencedColumnName: id
+            orphanRemoval: false
+    oneToMany:
+        shedules_t:
+            targetEntity: Shedule
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: idTeacherSh
+    lifecycleCallbacks: {  }

@@ -1,0 +1,30 @@
+teacher:
+    path:     /
+    defaults: { _controller: "BruvinskyHighschoolBundle:Teacher:index" }
+
+teacher_show:
+    path:     /{id}/show
+    defaults: { _controller: "BruvinskyHighschoolBundle:Teacher:show" }
+
+teacher_new:
+    path:     /new
+    defaults: { _controller: "BruvinskyHighschoolBundle:Teacher:new" }
+
+teacher_create:
+    path:     /create
+    defaults: { _controller: "BruvinskyHighschoolBundle:Teacher:create" }
+    methods:  POST
+
+teacher_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BruvinskyHighschoolBundle:Teacher:edit" }
+
+teacher_update:
+    path:     /{id}/update
+    defaults: { _controller: "BruvinskyHighschoolBundle:Teacher:update" }
+    methods:  [POST, PUT]
+
+teacher_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BruvinskyHighschoolBundle:Teacher:delete" }
+    methods:  [POST, DELETE]

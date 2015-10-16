@@ -1,0 +1,20 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+<p>Выберите группу</p>
+    <form action="{{ path('default_show_group', { 'ds_d': ds_d,'ds_s': ds_s }) }}" method="post">
+        <select name="name">
+            {% for entity in entities %}
+                <option value="{{ entity.id }}"> {{ entity.name }} </option>
+            {% endfor %}
+        </select>
+        <input name="submit" type="submit" value="Submit" />
+    </form>
+
+
+
+
+
+
+{% endblock %}
+

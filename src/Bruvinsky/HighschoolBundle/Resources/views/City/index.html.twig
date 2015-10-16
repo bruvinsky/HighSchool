@@ -1,0 +1,54 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Список городов</h1>
+    {# total items count #}
+    <div class="count">
+        Всего:
+        {{ pagination.getTotalItemCount }}
+    </div>
+    {##}
+
+    <table class="records_list">
+        <thead>
+        <tr>
+            <th>{{ knp_pagination_sortable(pagination, 'Id', 'ct.id') }}</th>
+            <th{% if pagination.isSorted('ct.name') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'Название', 'ct.name') }}</th>
+            <th>Регион</th>
+            <th>Телефонный код</th>
+            <th>Действие</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for entity in pagination %}
+            <tr {% if loop.index is odd %}class="color-odd-even"{% endif %}>
+                <td><a href="{{ path('city_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.name }}</td>
+                <td>{{ entity.idRegion }}</td>
+                <td>{{ entity.phoneCode }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('city_edit', { 'id': entity.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {##}
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
+    {##}
+
+    <ul>
+        <li>
+            <a href="{{ path('city_new') }}">
+                Добавить новый город
+            </a>
+        </li>
+    </ul>
+{% endblock %}

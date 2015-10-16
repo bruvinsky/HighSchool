@@ -1,0 +1,30 @@
+departmentspecialty:
+    path:     /
+    defaults: { _controller: "BruvinskyHighschoolBundle:DepartmentSpecialty:index" }
+
+departmentspecialty_show:
+    path:     /{id}/show
+    defaults: { _controller: "BruvinskyHighschoolBundle:DepartmentSpecialty:show" }
+
+departmentspecialty_new:
+    path:     /new
+    defaults: { _controller: "BruvinskyHighschoolBundle:DepartmentSpecialty:new" }
+
+departmentspecialty_create:
+    path:     /create
+    defaults: { _controller: "BruvinskyHighschoolBundle:DepartmentSpecialty:create" }
+    methods:  POST
+
+departmentspecialty_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BruvinskyHighschoolBundle:DepartmentSpecialty:edit" }
+
+departmentspecialty_update:
+    path:     /{id}/update
+    defaults: { _controller: "BruvinskyHighschoolBundle:DepartmentSpecialty:update" }
+    methods:  [POST, PUT]
+
+departmentspecialty_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BruvinskyHighschoolBundle:DepartmentSpecialty:delete" }
+    methods:  [POST, DELETE]

@@ -1,0 +1,60 @@
+Bruvinsky\HighschoolBundle\Entity\StudentGroup:
+    type: entity
+    table: student_group
+    repositoryClass: Bruvinsky\HighschoolBundle\Entity\StudentGroupRepository
+    indexes:
+        IDX_E5F73D5860531ACB:
+            columns:
+                - id_specialty
+        IDX_E5F73D586897615D:
+            columns:
+                - id_department
+    id:
+        id:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 0
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        name:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+    manyToOne:
+        idSpecialtyStGr:
+            targetEntity: Specialty
+            cascade: {  }
+            fetch: LAZY
+            inversedBy: studentsgroups_s
+            joinColumns:
+                id_specialty:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idDepartmentStGr:
+            targetEntity: Department
+            cascade: {  }
+            fetch: LAZY
+            inversedBy: studentsgroups_d
+            joinColumns:
+                id_department:
+                    referencedColumnName: id
+            orphanRemoval: false
+    oneToMany:
+        students_g:
+            targetEntity: Student
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: idGroupStudent
+            orphanRemoval: false
+        shedules_stgr:
+            targetEntity: Shedule
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: idGroupSh
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

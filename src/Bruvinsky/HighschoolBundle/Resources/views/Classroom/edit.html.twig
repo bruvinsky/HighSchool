@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Редактирование аудитории</h1>
+
+    {{ form(edit_form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('classroom') }}">
+            Вернуться к списку
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+    <div>Тип аудитории: 1 - лекционная аудитория, 2 - аудитория для практических занятий, 3 - лаборатория</div>
+{% endblock %}

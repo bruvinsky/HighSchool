@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+<p>Выберите факультет ВУЗа</p>
+    <form action="{{ path('default_show_faculty', { 'uni_id': uni_id }) }}" method="post">
+        <select name="name">
+            {% for entity in entities %}
+                <option value="{{ entity.fid }}"> {{ entity.fname }}</option>
+            {% endfor %}
+        </select>
+        <input name="submit" type="submit" value="Submit" />
+    </form>
+{% endblock %}
+
+
+
+

@@ -1,0 +1,64 @@
+Bruvinsky\HighschoolBundle\Entity\Student:
+    type: entity
+    table: student
+    indexes:
+        IDX_B723AF33834505F5:
+            columns:
+                - id_group
+        IDX_B723AF33A67B1E36:
+            columns:
+                - id_city
+    id:
+        id:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 0
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        name:
+            type: string
+            nullable: true
+            length: 60
+            options:
+                fixed: false
+        male:
+            type: decimal
+            nullable: true
+            precision: 1
+            scale: 0
+            options:
+                comment: '1 - male, 2 - female'
+        old:
+            type: decimal
+            nullable: true
+            precision: 3
+            scale: 0
+    manyToOne:
+        idGroupStudent:
+            targetEntity: StudentGroup
+            cascade: {  }
+            fetch: LAZY
+            inversedBy: students_g
+            joinColumns:
+                id_group:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idCityStudent:
+            targetEntity: City
+            cascade: {  }
+            fetch: LAZY
+            inversedBy: studentscities
+            joinColumns:
+                id_city:
+                    referencedColumnName: id
+            orphanRemoval: false
+    oneToMany:
+        marks_s:
+            targetEntity: Marks
+            cascade: {  }
+            fetch: EXTRA_LAZY
+            mappedBy: idStudentM
+    lifecycleCallbacks: {  }

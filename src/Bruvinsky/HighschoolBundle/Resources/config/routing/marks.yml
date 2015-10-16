@@ -1,0 +1,30 @@
+marks:
+    path:     /
+    defaults: { _controller: "BruvinskyHighschoolBundle:Marks:index" }
+
+marks_show:
+    path:     /{id}/show
+    defaults: { _controller: "BruvinskyHighschoolBundle:Marks:show" }
+
+marks_new:
+    path:     /new
+    defaults: { _controller: "BruvinskyHighschoolBundle:Marks:new" }
+
+marks_create:
+    path:     /create
+    defaults: { _controller: "BruvinskyHighschoolBundle:Marks:create" }
+    methods:  POST
+
+marks_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BruvinskyHighschoolBundle:Marks:edit" }
+
+marks_update:
+    path:     /{id}/update
+    defaults: { _controller: "BruvinskyHighschoolBundle:Marks:update" }
+    methods:  [POST, PUT]
+
+marks_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BruvinskyHighschoolBundle:Marks:delete" }
+    methods:  [POST, DELETE]

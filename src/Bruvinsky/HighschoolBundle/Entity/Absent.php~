@@ -1,0 +1,88 @@
+<?php
+
+namespace Bruvinsky\HighschoolBundle\Entity;
+
+/**
+ * Absent
+ */
+class Absent
+{
+    /**
+     * @var string
+     */
+    private $id;
+
+    /**
+     * @var \Bruvinsky\HighschoolBundle\Entity\Student
+     */
+    private $idStudentA;
+
+    /**
+     * @var \Bruvinsky\HighschoolBundle\Entity\Shedule
+     */
+    private $idSheduleA;
+
+
+    /**
+     * Get id
+     *
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set idStudentA
+     *
+     * @param \Bruvinsky\HighschoolBundle\Entity\Student $idStudentA
+     *
+     * @return Absent
+     */
+    public function setIdStudentA(\Bruvinsky\HighschoolBundle\Entity\Student $idStudentA = null)
+    {
+        $this->idStudentA = $idStudentA;
+
+        return $this;
+    }
+
+    /**
+     * Get idStudentA
+     *
+     * @return \Bruvinsky\HighschoolBundle\Entity\Student
+     */
+    public function getIdStudentA()
+    {
+        return $this->idStudentA;
+    }
+
+    /**
+     * Set idSheduleA
+     *
+     * @param \Bruvinsky\HighschoolBundle\Entity\Shedule $idSheduleA
+     *
+     * @return Absent
+     */
+    public function setIdSheduleA(\Bruvinsky\HighschoolBundle\Entity\Shedule $idSheduleA = null)
+    {
+        $this->idSheduleA = $idSheduleA;
+
+        return $this;
+    }
+
+    /**
+     * Get idSheduleA
+     *
+     * @return \Bruvinsky\HighschoolBundle\Entity\Shedule
+     */
+    public function getIdSheduleA()
+    {
+        return $this->idSheduleA;
+    }
+
+    public function __toString()
+    {
+        return $this->id;
+    }
+}

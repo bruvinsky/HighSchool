@@ -1,0 +1,45 @@
+Bruvinsky\HighschoolBundle\Entity\Marks:
+    type: entity
+    table: marks
+    indexes:
+        IDX_3C6AFA5369BE0643:
+            columns:
+                - id_student
+        IDX_3C6AFA5339EAB221:
+            columns:
+                - id_shedule
+    id:
+        id:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 0
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        mark:
+            type: decimal
+            nullable: true
+            precision: 4
+            scale: 1
+    manyToOne:
+        idStudentM:
+            targetEntity: Student
+            cascade: {  }
+            fetch: LAZY
+            inversedBy: marks_s
+            joinColumns:
+                id_student:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idSheduleM:
+            targetEntity: Shedule
+            cascade: {  }
+            fetch: LAZY
+            inversedBy: marks_sh
+            joinColumns:
+                id_shedule:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

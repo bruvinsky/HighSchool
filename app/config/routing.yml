@@ -1,0 +1,7 @@
+bruvinsky_highschool:
+    resource: "@BruvinskyHighschoolBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

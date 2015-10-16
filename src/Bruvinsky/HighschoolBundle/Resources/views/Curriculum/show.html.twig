@@ -1,0 +1,56 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Учебный план</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Лекции, ч.</th>
+                <td>{{ entity.lecture }}</td>
+            </tr>
+            <tr>
+                <th>Практические, ч.</th>
+                <td>{{ entity.practical }}</td>
+            </tr>
+            <tr>
+                <th>Лабораторные, ч.</th>
+                <td>{{ entity.lab }}</td>
+            </tr>
+            <tr>
+                <th>Экзамены, ед.</th>
+                <td>{{ entity.exam }}</td>
+            </tr>
+            <tr>
+                <th>Семестры, ед.</th>
+                <td>{{ entity.semester }}</td>
+            </tr>
+            <tr>
+                <th>Контрольные, ед.</th>
+                <td>{{ entity.test }}</td>
+            </tr>
+            <tr>
+                <th>Колоквиумы, ед.</th>
+                <td>{{ entity.quiz }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('curriculum') }}">
+            Вернуться к списку
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('curriculum_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

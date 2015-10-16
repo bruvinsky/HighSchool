@@ -1,0 +1,39 @@
+Bruvinsky\HighschoolBundle\Entity\DepartmentSpecialty:
+    type: entity
+    table: department_specialty
+    indexes:
+        IDX_3BE4D1206897615D:
+            columns:
+                - id_department
+        IDX_3BE4D12060531ACB:
+            columns:
+                - id_specialty
+    id:
+        id:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 0
+            id: true
+            generator:
+                strategy: SEQUENCE
+    manyToOne:
+        idDepartmentDS:
+            targetEntity: Department
+            cascade: {  }
+            fetch: LAZY
+            inversedBy: DS_d
+            joinColumns:
+                id_department:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idSpecialtyDS:
+            targetEntity: Specialty
+            cascade: {  }
+            fetch: LAZY
+            inversedBy: DS_s
+            joinColumns:
+                id_specialty:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,38 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Журнал занятия</h1>
+
+    <table class="records_list">
+        <thead>
+        <tr>
+
+            <th>Студент</th>
+            <th>Оценка</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr {% if loop.index is odd %}class="color-odd-even"{% endif %}>
+
+                <td>{{ entity.name }}</td>
+                <td>{% if entity.mark < 0 %}
+                        absent
+                    {% else %}
+                        {{ entity.mark }}
+                    {% endif %}
+                </td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+<li>
+    <a href="{{ path('shedule_show', { 'id': id }) }}">Информация о занятии</a>
+</li>
+    </ul>
+
+{% endblock %}

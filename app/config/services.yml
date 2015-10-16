@@ -1,0 +1,45 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+parameters:
+#    parameter_name: value
+
+services:
+#    service_name:
+#        class: AppBundle\Directory\ClassName
+#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    app.type.subject_issue_selector:
+        class: Bruvinsky\HighschoolBundle\Form\SubjectSelectorType
+        arguments: ["@doctrine.orm.entity_manager"]
+        tags:
+            - { name: form.type, alias: subject_issue_selector }
+
+    app.type.teacher_issue_selector:
+        class: Bruvinsky\HighschoolBundle\Form\TeacherSelectorType
+        arguments: ["@doctrine.orm.entity_manager"]
+        tags:
+            - { name: form.type, alias: teacher_issue_selector }
+
+    app.type.studentgroup_issue_selector:
+        class: Bruvinsky\HighschoolBundle\Form\StudentGroupSelectorType
+        arguments: ["@doctrine.orm.entity_manager"]
+        tags:
+            - { name: form.type, alias: studentgroup_issue_selector }
+
+    app.type.classroom_issue_selector:
+        class: Bruvinsky\HighschoolBundle\Form\ClassroomSelectorType
+        arguments: ["@doctrine.orm.entity_manager"]
+        tags:
+            - { name: form.type, alias: classroom_issue_selector }
+
+    app.type.student_issue_selector:
+        class: Bruvinsky\HighschoolBundle\Form\StudentSelectorType
+        arguments: ["@doctrine.orm.entity_manager"]
+        tags:
+            - { name: form.type, alias: student_issue_selector }
+
+    app.type.shedule_issue_selector:
+        class: Bruvinsky\HighschoolBundle\Form\SheduleSelectorType
+        arguments: ["@doctrine.orm.entity_manager"]
+        tags:
+            - { name: form.type, alias: shedule_issue_selector }
+

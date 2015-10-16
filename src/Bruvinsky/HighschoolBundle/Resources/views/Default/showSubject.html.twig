@@ -1,0 +1,50 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Список занятий</h1>
+    {# total items count #}
+    <div class="count">
+        Всего:
+        {{ pagination.getTotalItemCount }}
+    </div>
+    {##}
+    <table class="records_list">
+        <thead>
+        <tr>
+            <th>{{ knp_pagination_sortable(pagination, 'Id', 's.id') }}</th>
+            <th>Преподаватель (id)</th>
+            <th>Группа (id = {{ g_id }})</th>
+            <th>Предмет (id)</th>
+            <th>Дата</th>
+            <th>Оценки</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for entity in pagination %}
+            <tr {% if loop.index is odd %}class="color-odd-even"{% endif %}>
+                <td><a href="{{ path('shedule_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.idTeacherSh }} ({{ entity.idTeacherSh.id }})</td>
+                <td>{{ entity.idGroupSh }}</td>
+                <td>{{ entity.idSubjectSh }} ({{ entity.idSubjectSh.id }})</td>
+                <td>{% if entity.lessonDate %}{{ entity.lessonDate|date('Y-m-d') }}{% endif %}</td>
+                <td><a href="{{ path('shedule_show_marks', { 'id': entity.id }) }}">просмотр</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {##}
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
+    {##}
+    <p><a href="{{ path('shedule_new') }}">
+        Создать новое занятие
+    </a></p>
+
+    {{ dump() }}
+{% endblock %}
+
+
+
+

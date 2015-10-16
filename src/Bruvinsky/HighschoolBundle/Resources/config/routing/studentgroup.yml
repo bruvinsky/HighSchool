@@ -1,0 +1,30 @@
+studentgroup:
+    path:     /
+    defaults: { _controller: "BruvinskyHighschoolBundle:StudentGroup:index" }
+
+studentgroup_show:
+    path:     /{id}/show
+    defaults: { _controller: "BruvinskyHighschoolBundle:StudentGroup:show" }
+
+studentgroup_new:
+    path:     /new
+    defaults: { _controller: "BruvinskyHighschoolBundle:StudentGroup:new" }
+
+studentgroup_create:
+    path:     /create
+    defaults: { _controller: "BruvinskyHighschoolBundle:StudentGroup:create" }
+    methods:  POST
+
+studentgroup_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BruvinskyHighschoolBundle:StudentGroup:edit" }
+
+studentgroup_update:
+    path:     /{id}/update
+    defaults: { _controller: "BruvinskyHighschoolBundle:StudentGroup:update" }
+    methods:  [POST, PUT]
+
+studentgroup_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BruvinskyHighschoolBundle:StudentGroup:delete" }
+    methods:  [POST, DELETE]

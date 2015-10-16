@@ -1,0 +1,50 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Список регионов</h1>
+    {# total items count #}
+    <div class="count">
+        Всего:
+        {{ pagination.getTotalItemCount }}
+    </div>
+    {##}
+
+    <table class="records_list">
+        <thead>
+        <tr>
+            <th>{{ knp_pagination_sortable(pagination, 'Id', 'r.id') }}</th>
+            <th{% if pagination.isSorted('r.name') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'Регион', 'r.name') }}</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for entity in pagination %}
+            <tr {% if loop.index is odd %}class="color-odd-even"{% endif %}>
+                <td><a href="{{ path('region_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.name }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('region_edit', { 'id': entity.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {##}
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
+    {##}
+
+    <ul>
+        <li>
+            <a href="{{ path('region_new') }}">
+                Добавить новый регион
+            </a>
+        </li>
+    </ul>
+{% endblock %}

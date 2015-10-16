@@ -1,0 +1,54 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Список групп студентов</h1>
+    {# total items count #}
+    <div class="count">
+        Всего:
+        {{ pagination.getTotalItemCount }}
+    </div>
+    {##}
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>{{ knp_pagination_sortable(pagination, 'Id', 'sg.id') }}</th>
+                <th{% if pagination.isSorted('sg.name') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'Название', 'sg.name') }}</th>
+                <th>Кафедра</th>
+                <th>Специальность</th>
+                <th>Действие</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in pagination %}
+            <tr>
+                <td><a href="{{ path('studentgroup_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.name }}</td>
+                <td>{{ entity.idDepartmentStGr }}</td>
+                <td>{{ entity.idSpecialtyStGr }}</td>
+                <td>
+                <ul>
+
+                    <li>
+                        <a href="{{ path('studentgroup_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {##}
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
+    {##}
+
+        <ul>
+        <li>
+            <a href="{{ path('studentgroup_new') }}">
+                Создать новую группу
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

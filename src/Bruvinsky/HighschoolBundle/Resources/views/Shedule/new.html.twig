@@ -1,0 +1,16 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Создание занятия</h1>
+
+    {{ form(form) }}
+
+    <ul class="record_actions">
+    <li>
+        <a href="{{ path('shedule') }}">
+            Вернуться к списку
+        </a>
+    </li>
+</ul>
+
+{% endblock %}

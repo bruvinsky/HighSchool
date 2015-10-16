@@ -1,0 +1,23 @@
+default:
+    path:     /
+    defaults: { _controller: "BruvinskyHighschoolBundle:Default:showUni" }
+
+default_show_faculty:
+    path:     /{uni_id}/faculty
+    defaults: { _controller: "BruvinskyHighschoolBundle:Default:showFaculty" }
+
+default_show_department:
+    path:     /{f_id}/department
+    defaults: { _controller: "BruvinskyHighschoolBundle:Default:showDepartment" }
+
+default_show_group:
+    path:     /{ds_d}/{ds_s}/group
+    defaults: { _controller: "BruvinskyHighschoolBundle:Default:showGroup" }
+
+default_show_subject:
+    path:     /{g_id}/subject
+    defaults: { _controller: "BruvinskyHighschoolBundle:Default:showSubject" }
+
+default_show_lessons:
+    path:     /{g_id}/{s_id}/lessons
+    defaults: { _controller: "BruvinskyHighschoolBundle:Default:showLessons" }

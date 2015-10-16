@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Controller/CurriculumController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Controller/DefaultController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Form/CurriculumType.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Form/DepartmentSpecialtyType.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Form/DepartmentType.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Form/FacultyType.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Form/MarksType.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Form/SheduleType.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Form/SpecialtyType.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Form/StudentGroupType.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Form/StudentType.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Form/TeacherType.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Form/UniType.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/config/routing.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Curriculum/edit.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Curriculum/index.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Curriculum/new.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Curriculum/show.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Default/statDepartmentUni.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Default/statFacultyUni.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Default/statGroupUni.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Default/statStudentRegion.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Default/statStudentUniRegion.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Default/statUniRegion.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/DepartmentSpecialty/edit.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/DepartmentSpecialty/index.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/DepartmentSpecialty/new.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/DepartmentSpecialty/show.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Faculty/edit.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Faculty/index.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Faculty/new.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Faculty/show.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Marks/edit.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Marks/index.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Marks/new.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Marks/show.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Shedule/edit.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Shedule/new.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Shedule/show.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Specialty/edit.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Specialty/index.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Specialty/new.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Specialty/show.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/StudentGroup/edit.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/StudentGroup/index.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/StudentGroup/new.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/StudentGroup/show.html.twig" charset="UTF-8" />
+  </component>
+</project>

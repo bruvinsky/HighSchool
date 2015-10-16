@@ -1,0 +1,16 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Создание аудитории</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('classroom') }}">
+            Вернуться к списку
+        </a>
+    </li>
+</ul>
+    <div>Тип аудитории: 1 - лекционная аудитория, 2 - аудитория для практических занятий, 3 - лаборатория</div>
+{% endblock %}

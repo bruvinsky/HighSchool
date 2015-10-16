@@ -1,0 +1,47 @@
+Bruvinsky\HighschoolBundle\Entity\Classroom:
+    type: entity
+    table: classroom
+    indexes:
+        IDX_497D309DFCCF0426:
+            columns:
+                - id_uni
+    id:
+        id:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 0
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        type:
+            type: decimal
+            nullable: true
+            precision: 1
+            scale: 0
+            options:
+                comment: '1 - lecture, 2 - practical, 3 - lab'
+        nameNumber:
+            type: decimal
+            nullable: true
+            precision: 20
+            scale: 0
+            column: name_number
+    manyToOne:
+        idUniClass:
+            targetEntity: Uni
+            cascade: {  }
+            fetch: LAZY
+            inversedBy: classrooms
+            joinColumns:
+                id_uni:
+                    referencedColumnName: id
+            orphanRemoval: false
+    oneToMany:
+        shedules_class:
+            targetEntity: Shedule
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: idClassroomSh
+    lifecycleCallbacks: {  }

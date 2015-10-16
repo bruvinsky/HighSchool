@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+<p>Выберите ВУЗ</p>
+    <form action="{{ path('default') }}" method="post">
+        <select name="name">
+            {% for entity in entities %}
+                <option value="{{ entity.id }}"> {{ entity.name }} </option>
+            {% endfor %}
+        </select>
+        <input name="submit" type="submit" value="Submit"/>
+    </form>
+{% endblock %}
+
+
+
+

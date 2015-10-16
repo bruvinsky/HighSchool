@@ -1,0 +1,30 @@
+city:
+    path:     /
+    defaults: { _controller: "BruvinskyHighschoolBundle:City:index" }
+
+city_show:
+    path:     /{id}/show
+    defaults: { _controller: "BruvinskyHighschoolBundle:City:show" }
+
+city_new:
+    path:     /new
+    defaults: { _controller: "BruvinskyHighschoolBundle:City:new" }
+
+city_create:
+    path:     /create
+    defaults: { _controller: "BruvinskyHighschoolBundle:City:create" }
+    methods:  POST
+
+city_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BruvinskyHighschoolBundle:City:edit" }
+
+city_update:
+    path:     /{id}/update
+    defaults: { _controller: "BruvinskyHighschoolBundle:City:update" }
+    methods:  [POST, PUT]
+
+city_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BruvinskyHighschoolBundle:City:delete" }
+    methods:  [POST, DELETE]

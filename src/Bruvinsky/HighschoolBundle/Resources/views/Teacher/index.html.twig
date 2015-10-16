@@ -1,0 +1,52 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Список преподавателей</h1>
+
+    {# total items count #}
+    <div class="count">
+        Всего:
+        {{ pagination.getTotalItemCount }}
+    </div>
+    {##}
+
+    <table class="records_list">
+        <tr>
+            <th>{{ knp_pagination_sortable(pagination, 'Id', 't.id') }}</th>
+            <th{% if pagination.isSorted('t.name') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'ФИО', 't.name') }}</th>
+            <th>Кафедра</th>
+            <th>Actions</th>
+        </tr>
+        <tbody>
+        {% for entity in pagination %}
+            <tr {% if loop.index is odd %}class="color-odd-even"{% endif %}>
+                <td><a href="{{ path('teacher_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.name }}</td>
+                <td>{{ entity.idDepartment }}</td>
+                <td>
+                    <ul>
+
+                        <li>
+                            <a href="{{ path('teacher_edit', { 'id': entity.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {##}
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
+    {##}
+
+    <ul>
+        <li>
+            <a href="{{ path('teacher_new') }}">
+               Добавить преподавателя
+            </a>
+        </li>
+    </ul>
+{% endblock %}

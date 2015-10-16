@@ -1,0 +1,111 @@
+bruvinsky_highschool_faculty:
+    resource: "@BruvinskyHighschoolBundle/Resources/config/routing/faculty.yml"
+    prefix:   /faculty
+
+bruvinsky_highschool_specialty:
+    resource: "@BruvinskyHighschoolBundle/Resources/config/routing/specialty.yml"
+    prefix:   /specialty
+
+bruvinsky_highschool_studentgroup:
+    resource: "@BruvinskyHighschoolBundle/Resources/config/routing/studentgroup.yml"
+    prefix:   /studentgroup
+
+bruvinsky_highschool_uni:
+    resource: "@BruvinskyHighschoolBundle/Resources/config/routing/uni.yml"
+    prefix:   /uni
+
+bruvinsky_highschool_teacher:
+    resource: "@BruvinskyHighschoolBundle/Resources/config/routing/teacher.yml"
+    prefix:   /teacher
+
+bruvinsky_highschool_subject:
+    resource: "@BruvinskyHighschoolBundle/Resources/config/routing/subject.yml"
+    prefix:   /subject
+
+bruvinsky_highschool_student:
+    resource: "@BruvinskyHighschoolBundle/Resources/config/routing/student.yml"
+    prefix:   /student
+
+bruvinsky_highschool_shedule:
+    resource: "@BruvinskyHighschoolBundle/Resources/config/routing/shedule.yml"
+    prefix:   /shedule
+
+bruvinsky_highschool_region:
+    resource: "@BruvinskyHighschoolBundle/Resources/config/routing/region.yml"
+    prefix:   /region
+
+bruvinsky_highschool_marks:
+    resource: "@BruvinskyHighschoolBundle/Resources/config/routing/marks.yml"
+    prefix:   /marks
+
+bruvinsky_highschool_departmentspecialty:
+    resource: "@BruvinskyHighschoolBundle/Resources/config/routing/departmentspecialty.yml"
+    prefix:   /departmentspecialty
+
+bruvinsky_highschool_department:
+    resource: "@BruvinskyHighschoolBundle/Resources/config/routing/department.yml"
+    prefix:   /department
+
+bruvinsky_highschool_curriculum:
+    resource: "@BruvinskyHighschoolBundle/Resources/config/routing/curriculum.yml"
+    prefix:   /curriculum
+
+bruvinsky_highschool_classroom:
+    resource: "@BruvinskyHighschoolBundle/Resources/config/routing/classroom.yml"
+    prefix:   /classroom
+
+bruvinsky_highschool_city:
+    resource: "@BruvinskyHighschoolBundle/Resources/config/routing/city.yml"
+    prefix:   /city
+
+bruvinsky_highschool_default:
+    resource: "@BruvinskyHighschoolBundle/Resources/config/routing/default.yml"
+    prefix:   /default
+
+bruvinsky_highschool_home:
+    path:     /
+    defaults: { _controller: BruvinskyHighschoolBundle:Default:index }
+
+stat_stud_reg:
+    path:     /statistic_of_student_origin
+    defaults: { _controller: "BruvinskyHighschoolBundle:Default:statStudentOrigin" }
+
+stat_uni_reg:
+    path:     /statistic_of_uni_region
+    defaults: { _controller: "BruvinskyHighschoolBundle:Default:statUniRegion" }
+
+stat_stud_uni_reg:
+    path:     /statistic_of_student_at_the_universities
+    defaults: { _controller: "BruvinskyHighschoolBundle:Default:statStudentUniRegion" }
+
+stat_group_uni:
+    path:     /stat_group_per_uni
+    defaults: { _controller: "BruvinskyHighschoolBundle:Default:statGroupPerUni" }
+
+stat_department_uni:
+    path:     /stat_department_per_uni
+    defaults: { _controller: "BruvinskyHighschoolBundle:Default:statDepartmentPerUni" }
+
+stat_faculty_uni:
+    path:     /stat_faculty_per_uni
+    defaults: { _controller: "BruvinskyHighschoolBundle:Default:statFacultyPerUni" }
+
+stat_ajax_uni:
+    path:     /stat_ajax_uni
+    defaults: { _controller: "BruvinskyHighschoolBundle:Default:statAjaxUni" }
+
+stat_ajax_faculty:
+    path:     /stat_ajax_faculty
+    defaults: { _controller: "BruvinskyHighschoolBundle:Default:statAjaxFaculty" }
+
+stat_ajax_departmentspecialty:
+    path:     /stat_ajax_departmentspecialty
+    defaults: { _controller: "BruvinskyHighschoolBundle:Default:statAjaxDepartmentSpecialty" }
+
+stat_ajax_group:
+    path:     /stat_ajax_group
+    defaults: { _controller: "BruvinskyHighschoolBundle:Default:statAjaxGroup" }
+
+stat_ajax_students:
+    path:     /stat_ajax_students
+    defaults: { _controller: "BruvinskyHighschoolBundle:Default:statAjaxStudents" }

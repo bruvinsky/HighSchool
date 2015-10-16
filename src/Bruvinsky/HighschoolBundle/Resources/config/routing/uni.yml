@@ -1,0 +1,30 @@
+uni:
+    path:     /
+    defaults: { _controller: "BruvinskyHighschoolBundle:Uni:index" }
+
+uni_show:
+    path:     /{id}/show
+    defaults: { _controller: "BruvinskyHighschoolBundle:Uni:show" }
+
+uni_new:
+    path:     /new
+    defaults: { _controller: "BruvinskyHighschoolBundle:Uni:new" }
+
+uni_create:
+    path:     /create
+    defaults: { _controller: "BruvinskyHighschoolBundle:Uni:create" }
+    methods:  POST
+
+uni_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BruvinskyHighschoolBundle:Uni:edit" }
+
+uni_update:
+    path:     /{id}/update
+    defaults: { _controller: "BruvinskyHighschoolBundle:Uni:update" }
+    methods:  [POST, PUT]
+
+uni_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BruvinskyHighschoolBundle:Uni:delete" }
+    methods:  [POST, DELETE]

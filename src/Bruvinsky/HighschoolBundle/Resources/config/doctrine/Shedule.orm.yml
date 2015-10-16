@@ -1,0 +1,105 @@
+Bruvinsky\HighschoolBundle\Entity\Shedule:
+    type: entity
+    table: shedule
+    repositoryClass: Bruvinsky\HighschoolBundle\Entity\SheduleRepository
+    indexes:
+        IDX_E7771B516E6B0FA5:
+            columns:
+                - id_teacher
+        IDX_E7771B51834505F5:
+            columns:
+                - id_group
+        IDX_E7771B51C9488CBA:
+            columns:
+                - id_classroom
+        IDX_E7771B512553970A:
+            columns:
+                - id_subject
+    id:
+        id:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 0
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        typeLesson:
+            type: decimal
+            nullable: true
+            precision: 1
+            scale: 0
+            options:
+                comment: '1 - lecture, 2 - practical, 3 - lab'
+            column: type_lesson
+        oddEven:
+            type: decimal
+            nullable: true
+            precision: 1
+            scale: 0
+            options:
+                comment: '1 - even, 2 - add'
+            column: odd_even
+        weekday:
+            type: decimal
+            nullable: true
+            precision: 1
+            scale: 0
+            options:
+                comment: '1 - Monday, 2 - Tuesday, 3 - Wednesday, 4 - Thursday, 5 - Friday, 6 - Saturday, 7 - Sunday'
+        ntt:
+            type: decimal
+            nullable: true
+            precision: 1
+            scale: 0
+            options:
+                comment: "numberInTimeTable\r\n1,2,3"
+        lessonDate:
+            type: date
+            nullable: true
+            column: lesson_date
+    manyToOne:
+        idTeacherSh:
+            targetEntity: Teacher
+            cascade: {  }
+            fetch: LAZY
+            inversedBy: shedules_t
+            joinColumns:
+                id_teacher:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idGroupSh:
+            targetEntity: StudentGroup
+            cascade: {  }
+            fetch: LAZY
+            inversedBy: shedules_stgr
+            joinColumns:
+                id_group:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idClassroomSh:
+            targetEntity: Classroom
+            cascade: {  }
+            fetch: LAZY
+            inversedBy: shedules_class
+            joinColumns:
+                id_classroom:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idSubjectSh:
+            targetEntity: Subject
+            cascade: {  }
+            fetch: LAZY
+            inversedBy: shedules_sub
+            joinColumns:
+                id_subject:
+                    referencedColumnName: id
+            orphanRemoval: false
+    oneToMany:
+        marks_sh:
+            targetEntity: Marks
+            cascade: {  }
+            fetch: EXTRA_LAZY
+            mappedBy: idSheduleM
+    lifecycleCallbacks: {  }

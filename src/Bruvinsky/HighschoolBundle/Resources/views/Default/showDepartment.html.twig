@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+<p>Выберите специальность и кафедру</p>
+    <form action="{{ path('default_show_department', { 'f_id': f_id }) }}" method="post">
+        <select name="name">
+            {% for entity in entities %}
+                <option value="{{ entity.dsid }}"> Специальность: {{ entity.sname }}. {{ entity.dname }}   </option>
+            {% endfor %}
+        </select>
+        <input name="submit" type="submit" value="Submit" />
+    </form>
+{% endblock %}
+
+
+
+

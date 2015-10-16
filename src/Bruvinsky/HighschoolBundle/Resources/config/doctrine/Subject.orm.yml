@@ -1,0 +1,37 @@
+Bruvinsky\HighschoolBundle\Entity\Subject:
+    type: entity
+    table: subject
+    id:
+        id:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 0
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        name:
+            type: string
+            nullable: true
+            length: 250
+            options:
+                fixed: false
+    oneToMany:
+        teacher_s:
+            targetEntity: Teacher
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: idSubject
+        shedules_sub:
+            targetEntity: Shedule
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: idSubjectSh
+        subject_cur:
+            targetEntity: Curriculum
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: idSubjectCur
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

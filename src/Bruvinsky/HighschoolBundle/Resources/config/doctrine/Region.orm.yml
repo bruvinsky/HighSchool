@@ -1,0 +1,26 @@
+Bruvinsky\HighschoolBundle\Entity\Region:
+    type: entity
+    table: region
+    id:
+        id:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 0
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        name:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+    oneToMany:
+            cities:
+                targetEntity: City
+                cascade: {  }
+                fetch: LAZY
+                mappedBy: idRegion
+    lifecycleCallbacks: {  }

@@ -1,0 +1,47 @@
+Bruvinsky\HighschoolBundle\Entity\Specialty:
+    type: entity
+    table: specialty
+    id:
+        id:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 0
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        name:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+    oneToMany:
+        studentsgroups_s:
+            targetEntity: StudentGroup
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: idSpecialtyStGr
+        specialty_cur:
+            targetEntity: Curriculum
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: idSpecialtyCur
+            orphanRemoval: false
+        DS_s:
+            targetEntity: DepartmentSpecialty
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: idSpecialtyDS
+    manyToOne:
+         idFacultySpecialty:
+            targetEntity: Faculty
+            cascade: {  }
+            fetch: LAZY
+            inversedBy: specialties_f
+            joinColumns:
+                id_faculty:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

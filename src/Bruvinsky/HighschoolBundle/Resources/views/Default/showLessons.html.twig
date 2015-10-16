@@ -1,0 +1,44 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <p>Журнал</p>
+
+    {#<form action="{{ path('default_show_lessons', {'g_id': g_id, 's_id': s_id}) }}" method="post">#}
+
+    <table>
+        <td></td>
+        {#<tr>#}
+            {#<td></td>#}
+            {#{% for e_id in id %}#}
+                {#<td>{{ e_id }}</td>#}
+            {#{% endfor %}#}
+        {#</tr>#}
+        <tr>
+            <td></td>
+            {% for e_date in lessonDate %}
+                <td>{{ e_date }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td></td>
+            {% for e_tname in tname %}
+                <td>{{ e_tname }}</td>
+            {% endfor %}
+        </tr>
+        {% for student in students %}
+            <tr {% if loop.index is odd %}class="color-odd-even"{% endif %}>
+                <td>{{ student.name }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+    {#</form>#}
+    <a href="{{ path('shedule_new') }}">
+        Create a new entry
+    </a>
+{% endblock %}
+
+
+
+

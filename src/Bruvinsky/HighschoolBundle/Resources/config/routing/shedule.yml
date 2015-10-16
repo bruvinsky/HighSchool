@@ -1,0 +1,34 @@
+shedule:
+    path:     /
+    defaults: { _controller: "BruvinskyHighschoolBundle:Shedule:index" }
+
+shedule_show:
+    path:     /{id}/show
+    defaults: { _controller: "BruvinskyHighschoolBundle:Shedule:show" }
+
+shedule_new:
+    path:     /new
+    defaults: { _controller: "BruvinskyHighschoolBundle:Shedule:new" }
+
+shedule_create:
+    path:     /create
+    defaults: { _controller: "BruvinskyHighschoolBundle:Shedule:create" }
+    methods:  POST
+
+shedule_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BruvinskyHighschoolBundle:Shedule:edit" }
+
+shedule_update:
+    path:     /{id}/update
+    defaults: { _controller: "BruvinskyHighschoolBundle:Shedule:update" }
+    methods:  [POST, PUT]
+
+shedule_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BruvinskyHighschoolBundle:Shedule:delete" }
+    methods:  [POST, DELETE]
+
+shedule_show_marks:
+    path:     /{id}/marks
+    defaults: { _controller: "BruvinskyHighschoolBundle:Shedule:marks" }

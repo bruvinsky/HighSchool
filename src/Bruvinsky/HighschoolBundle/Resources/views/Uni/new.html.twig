@@ -1,0 +1,15 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Создание ВУЗа</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('uni') }}">
+            Вернуться к списку
+        </a>
+    </li>
+</ul>
+{% endblock %}

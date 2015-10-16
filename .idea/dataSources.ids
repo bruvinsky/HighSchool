@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="PostgreSQL - postgres@localhost" uuid="8b063912-af6c-4a79-b33b-c668ee48e89f">
+    <database-info product="PostgreSQL" version="9.4.4" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
+    <schema name="public" catalog="postgres"/>
+    <table name="city" schema="public" catalog="postgres" type="TABLE">
+      <column name="id" sqlType="numeric" precision="20" scale="0" nullable="false" jdbcType="2" def="bmV4dHZhbCgnY2l0eV9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
+      <column name="id_region" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="name" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone_code" sqlType="varchar" precision="7" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="city_pkey" columns="id"/>
+      <foreign-key name="city_fk" columns="id_region" ref-table="region" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="student_fk1" table="student" schema="public" catalog="postgres" columns="id_city"/>
+      <exported-key name="uni_fk" table="uni" schema="public" catalog="postgres" columns="id_city"/>
+    </table>
+    <table name="city_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="classroom" schema="public" catalog="postgres" type="TABLE">
+      <column name="id" sqlType="numeric" precision="20" scale="0" nullable="false" jdbcType="2" def="bmV4dHZhbCgnY2xhc3Nyb29tX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
+      <column name="type" sqlType="numeric" precision="1" scale="0" nullable="true" jdbcType="2" remarks="MSAtIGxlY3R1cmUsIDIgLSBwcmFjdGljYWwsIDMgLSBsYWI="/>
+      <column name="id_uni" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="name_number" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <primary-key name="classroom_pkey" columns="id"/>
+      <foreign-key name="classroom_fk" columns="id_uni" ref-table="uni" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="shedule_fk2" table="shedule" schema="public" catalog="postgres" columns="id_classroom"/>
+    </table>
+    <table name="classroom_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="curriculum" schema="public" catalog="postgres" type="TABLE">
+      <column name="id" sqlType="numeric" precision="20" scale="0" nullable="false" jdbcType="2" def="bmV4dHZhbCgnY3VycmljdWx1bV9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
+      <column name="id_subject" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="lecture" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="practical" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="lab" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="exam" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="semester" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="test" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="quiz" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="id_specialty" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <primary-key name="specialty_pkey" columns="id"/>
+      <foreign-key name="curriculum_fk1" columns="id_specialty" ref-table="specialty" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="curriculum_fk" columns="id_subject" ref-table="subject" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="curriculum_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="department" schema="public" catalog="postgres" type="TABLE">
+      <column name="id" sqlType="numeric" precision="20" scale="0" nullable="false" jdbcType="2" def="bmV4dHZhbCgnZGVwYXJ0bWVudF9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
+      <column name="name" sqlType="varchar" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="id_faculty" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <primary-key name="department_pkey" columns="id"/>
+      <foreign-key name="department_fk" columns="id_faculty" ref-table="faculty" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="department_specialty_fk" table="department_specialty" schema="public" catalog="postgres" columns="id_department"/>
+      <exported-key name="student_group_fk" table="student_group" schema="public" catalog="postgres" columns="id_department"/>
+      <exported-key name="teacher_fk" table="teacher" schema="public" catalog="postgres" columns="id_department"/>
+    </table>
+    <table name="department_arhiv" schema="public" catalog="postgres" type="TABLE">
+      <column name="id" sqlType="numeric" precision="20" scale="0" nullable="false" jdbcType="2" def="bmV4dHZhbCgnZGVwYXJ0bWVudGFyaGl2X2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
+      <column name="name" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="department_arhiv_pkey" columns="id"/>
+    </table>
+    <table name="department_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="department_specialty" schema="public" catalog="postgres" type="TABLE">
+      <column name="id" sqlType="numeric" precision="20" scale="0" nullable="false" jdbcType="2" def="bmV4dHZhbCgnZGVwYXJ0bWVudF9zcGVjaWFsdHlfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
+      <column name="id_department" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="id_specialty" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <primary-key name="department_specialty_pkey" columns="id"/>
+      <foreign-key name="department_specialty_fk" columns="id_department" ref-table="department" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="department_specialty_fk1" columns="id_specialty" ref-table="specialty" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="department_specialty_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="departmentarhiv_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="faculty" schema="public" catalog="postgres" type="TABLE">
+      <column name="id" sqlType="numeric" precision="20" scale="0" nullable="false" jdbcType="2" def="bmV4dHZhbCgnZmFjdWx0eV9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
+      <column name="name" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="id_uni" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <primary-key name="faculty_pkey" columns="id"/>
+      <foreign-key name="faculty_fk" columns="id_uni" ref-table="uni" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="department_fk" table="department" schema="public" catalog="postgres" columns="id_faculty"/>
+      <exported-key name="specialty_fk" table="specialty" schema="public" catalog="postgres" columns="id_faculty"/>
+    </table>
+    <table name="faculty_arhiv" schema="public" catalog="postgres" type="TABLE">
+      <column name="id" sqlType="numeric" precision="20" scale="0" nullable="false" jdbcType="2" def="bmV4dHZhbCgnZmFjdWx0eWFyaGl2X2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
+      <column name="name" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="faculty_arhiv_pkey" columns="id"/>
+    </table>
+    <table name="faculty_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="facultyarhiv_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="marks" schema="public" catalog="postgres" type="TABLE">
+      <column name="id" sqlType="numeric" precision="20" scale="0" nullable="false" jdbcType="2" def="bmV4dHZhbCgnbWFya3NfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
+      <column name="id_student" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="id_shedule" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="mark" sqlType="numeric" precision="4" scale="1" nullable="true" jdbcType="2"/>
+      <column name="id_teacher" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="id_group" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="id_classroom" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="id_subject" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <primary-key name="marks_pkey" columns="id"/>
+      <foreign-key name="marks_fk1" columns="id_shedule" ref-table="shedule" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="marks_fk" columns="id_student" ref-table="student" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="marks_id_group_id_subject" unique="false" columns="id_group,id_subject"/>
+    </table>
+    <table name="marks_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="numberofmarks" schema="public" catalog="postgres" type="MATERIALIZED VIEW">
+      <column name="count" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+    </table>
+    <table name="numberofshedule" schema="public" catalog="postgres" type="MATERIALIZED VIEW">
+      <column name="count" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+    </table>
+    <table name="numberofstudent" schema="public" catalog="postgres" type="MATERIALIZED VIEW">
+      <column name="count" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+    </table>
+    <table name="region" schema="public" catalog="postgres" type="TABLE">
+      <column name="id" sqlType="numeric" precision="20" scale="0" nullable="false" jdbcType="2" def="bmV4dHZhbCgncmVnaW9uX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
+      <column name="name" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="code" sqlType="varchar" precision="5" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="region_pkey" columns="id"/>
+      <exported-key name="city_fk" table="city" schema="public" catalog="postgres" columns="id_region"/>
+    </table>
+    <table name="region_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="shedule" schema="public" catalog="postgres" type="TABLE">
+      <column name="id" sqlType="numeric" precision="20" scale="0" nullable="false" jdbcType="2" def="bmV4dHZhbCgnc2hlZHVsZV9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
+      <column name="id_teacher" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="id_group" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="id_classroom" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="id_subject" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="type_lesson" sqlType="numeric" precision="1" scale="0" nullable="true" jdbcType="2" remarks="MSAtIGxlY3R1cmUsIDIgLSBwcmFjdGljYWwsIDMgLSBsYWI="/>
+      <column name="odd_even" sqlType="numeric" precision="1" scale="0" nullable="true" jdbcType="2" remarks="MSAtIGV2ZW4sIDIgLSBhZGQ="/>
+      <column name="weekday" sqlType="numeric" precision="1" scale="0" nullable="true" jdbcType="2" remarks="MSAtIE1vbmRheSwgMiAtIFR1ZXNkYXksIDMgLSBXZWRuZXNkYXksIDQgLSBUaHVyc2RheSwgNSAtIEZyaWRheSwgNiAtIFNhdHVyZGF5LCA3IC0gU3VuZGF5"/>
+      <column name="ntt" sqlType="numeric" precision="1" scale="0" nullable="true" jdbcType="2" remarks="bnVtYmVySW5UaW1lVGFibGUNCjEsMiwz"/>
+      <column name="lesson_date" sqlType="date" precision="13" scale="0" nullable="true" jdbcType="91"/>
+      <primary-key name="shedule_pkey" columns="id"/>
+      <foreign-key name="shedule_fk2" columns="id_classroom" ref-table="classroom" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="shedule_fk1" columns="id_group" ref-table="student_group" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="shedule_fk3" columns="id_subject" ref-table="subject" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="shedule_fk" columns="id_teacher" ref-table="teacher" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="marks_fk1" table="marks" schema="public" catalog="postgres" columns="id_shedule"/>
+      <index name="shedule_id_group" unique="false" columns="id_group"/>
+      <index name="shedule_id_lesson_date" unique="false" columns="lesson_date"/>
+    </table>
+    <table name="shedule_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="specialty" schema="public" catalog="postgres" type="TABLE">
+      <column name="name" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="id" sqlType="numeric" precision="20" scale="0" nullable="false" jdbcType="2" def="bmV4dHZhbCgnc3BlY2lhbHR5X2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
+      <column name="id_faculty" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <primary-key name="specialty_arhiv_pkey" columns="id"/>
+      <foreign-key name="specialty_fk" columns="id_faculty" ref-table="faculty" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="curriculum_fk1" table="curriculum" schema="public" catalog="postgres" columns="id_specialty"/>
+      <exported-key name="department_specialty_fk1" table="department_specialty" schema="public" catalog="postgres" columns="id_specialty"/>
+      <exported-key name="student_group_fk1" table="student_group" schema="public" catalog="postgres" columns="id_specialty"/>
+    </table>
+    <table name="specialty_arhiv" schema="public" catalog="postgres" type="TABLE">
+      <column name="id" sqlType="numeric" precision="20" scale="0" nullable="false" jdbcType="2" def="bmV4dHZhbCgnc3BlY2lhbHR5YXJoaXZfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
+      <column name="name" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="id_faculty_arhiv" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <primary-key name="specialty_arhiv_pkey1" columns="id"/>
+    </table>
+    <table name="specialty_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="specialtyarhiv_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="student" schema="public" catalog="postgres" type="TABLE">
+      <column name="id" sqlType="numeric" precision="20" scale="0" nullable="false" jdbcType="2" def="bmV4dHZhbCgnc3R1ZGVudF9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
+      <column name="name" sqlType="varchar" precision="60" scale="0" nullable="true" jdbcType="12"/>
+      <column name="id_group" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="id_city" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="male" sqlType="numeric" precision="1" scale="0" nullable="true" jdbcType="2" remarks="MSAtIG1hbGUsIDIgLSBmZW1hbGU="/>
+      <column name="old" sqlType="numeric" precision="3" scale="0" nullable="true" jdbcType="2"/>
+      <primary-key name="student_pkey" columns="id"/>
+      <foreign-key name="student_fk1" columns="id_city" ref-table="city" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="student_fk" columns="id_group" ref-table="student_group" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="marks_fk" table="marks" schema="public" catalog="postgres" columns="id_student"/>
+    </table>
+    <table name="student_group" schema="public" catalog="postgres" type="TABLE">
+      <column name="id" sqlType="numeric" precision="20" scale="0" nullable="false" jdbcType="2" def="bmV4dHZhbCgnc3R1ZGVudF9ncm91cF9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
+      <column name="name" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="id_specialty" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="id_department" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <primary-key name="group_pkey" columns="id"/>
+      <foreign-key name="student_group_fk" columns="id_department" ref-table="department" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="student_group_fk1" columns="id_specialty" ref-table="specialty" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="shedule_fk1" table="shedule" schema="public" catalog="postgres" columns="id_group"/>
+      <exported-key name="student_fk" table="student" schema="public" catalog="postgres" columns="id_group"/>
+    </table>
+    <table name="student_group_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="student_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="subject" schema="public" catalog="postgres" type="TABLE">
+      <column name="id" sqlType="numeric" precision="20" scale="0" nullable="false" jdbcType="2" def="bmV4dHZhbCgnc3ViamVjdF9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
+      <column name="name" sqlType="varchar" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="subject_pkey" columns="id"/>
+      <exported-key name="curriculum_fk" table="curriculum" schema="public" catalog="postgres" columns="id_subject"/>
+      <exported-key name="shedule_fk3" table="shedule" schema="public" catalog="postgres" columns="id_subject"/>
+      <exported-key name="teacher_fk1" table="teacher" schema="public" catalog="postgres" columns="id_subject"/>
+    </table>
+    <table name="subject_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="teacher" schema="public" catalog="postgres" type="TABLE">
+      <column name="id" sqlType="numeric" precision="20" scale="0" nullable="false" jdbcType="2" def="bmV4dHZhbCgndGVhY2hlcl9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
+      <column name="name" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="id_department" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="id_subject" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <primary-key name="teacher_pkey" columns="id"/>
+      <foreign-key name="teacher_fk" columns="id_department" ref-table="department" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="teacher_fk1" columns="id_subject" ref-table="subject" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="shedule_fk" table="shedule" schema="public" catalog="postgres" columns="id_teacher"/>
+    </table>
+    <table name="teacher_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="temp" schema="public" catalog="postgres" type="TABLE">
+      <column name="id" sqlType="numeric" precision="20" scale="0" nullable="false" jdbcType="2" def="bmV4dHZhbCgndGVtcF9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
+      <column name="id_f" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="id_f_spec" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="i" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <primary-key name="temp_pkey" columns="id"/>
+    </table>
+    <table name="temp1name" schema="public" catalog="postgres" type="TABLE">
+      <column name="id" sqlType="numeric" precision="20" scale="0" nullable="false" jdbcType="2" def="bmV4dHZhbCgndGVtcDFuYW1lX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
+      <column name="name" sqlType="varchar" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="temp1name_pkey" columns="id"/>
+    </table>
+    <table name="temp1name_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="temp2name" schema="public" catalog="postgres" type="TABLE">
+      <column name="id" sqlType="numeric" precision="20" scale="0" nullable="false" jdbcType="2" def="bmV4dHZhbCgndGVtcDJuYW1lX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
+      <column name="name2" sqlType="varchar" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="temp2name_pkey" columns="id"/>
+    </table>
+    <table name="temp2name_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="temp_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="uni" schema="public" catalog="postgres" type="TABLE">
+      <column name="id" sqlType="numeric" precision="20" scale="0" nullable="false" jdbcType="2" def="bmV4dHZhbCgndW5pX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
+      <column name="name" sqlType="varchar" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="id_city" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="weight" sqlType="numeric" precision="4" scale="2" nullable="true" jdbcType="2"/>
+      <primary-key name="uni_pkey" columns="id"/>
+      <foreign-key name="uni_fk" columns="id_city" ref-table="city" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="classroom_fk" table="classroom" schema="public" catalog="postgres" columns="id_uni"/>
+      <exported-key name="faculty_fk" table="faculty" schema="public" catalog="postgres" columns="id_uni"/>
+    </table>
+    <table name="uni_id_seq" schema="public" catalog="postgres" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="v_student_group" schema="public" catalog="postgres" type="VIEW">
+      <column name="id" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="name" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="id_specialty" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="id_department" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="id_uni" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+    </table>
+    <table name="v_teacher" schema="public" catalog="postgres" type="VIEW">
+      <column name="id" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="name" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="id_department" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="id_subject" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+      <column name="id_uni" sqlType="numeric" precision="20" scale="0" nullable="true" jdbcType="2"/>
+    </table>
+    <procedure name="filling_absent" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="filling_curriculum" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="filling_department" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="filling_faculty_specialty" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="filling_facultyarhiv_specialtyarhiv" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="filling_marks" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="filling_shedule" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="filling_shedule_" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="filling_shedule_2" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="filling_student" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="filling_studentgroup" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="filling_teacher" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="filling_weight_uni" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="function1" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="numeric" precision="0" scale="0" nullable="true" jdbcType="2" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="function_fill_arhivs_specialty_faculty" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="function_fill_classroom" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="function_fill_faculty_last_edition" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="function_fill_shedule" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="function_fill_shedule_date" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="function_fill_spec_facult" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="function_fill_student_add_male" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="function_fill_student_id_group" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="function_random_depart" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="function_random_teacher" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="function_select_count_group" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="numeric" precision="0" scale="0" nullable="true" jdbcType="2" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="function_specialty_step2_fill_subjects" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="function_stat_uni_department" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="name" sqlType="varchar" precision="0" scale="0" nullable="true" jdbcType="12" type="5" index="1"/>
+        <parameter name="amount" sqlType="int8" precision="0" scale="0" nullable="true" jdbcType="-5" type="5" index="2"/>
+      </prototype>
+    </procedure>
+    <procedure name="function_stat_uni_faculty" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="name" sqlType="varchar" precision="0" scale="0" nullable="true" jdbcType="12" type="5" index="1"/>
+        <parameter name="amount" sqlType="int8" precision="0" scale="0" nullable="true" jdbcType="-5" type="5" index="2"/>
+      </prototype>
+    </procedure>
+    <procedure name="function_stat_uni_group" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="name" sqlType="varchar" precision="0" scale="0" nullable="true" jdbcType="12" type="5" index="1"/>
+        <parameter name="amount" sqlType="int8" precision="0" scale="0" nullable="true" jdbcType="-5" type="5" index="2"/>
+      </prototype>
+    </procedure>
+    <procedure name="function_stat_uni_spec" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="name" sqlType="varchar" precision="0" scale="0" nullable="true" jdbcType="12" type="5" index="1"/>
+        <parameter name="amount" sqlType="int8" precision="0" scale="0" nullable="true" jdbcType="-5" type="5" index="2"/>
+      </prototype>
+    </procedure>
+    <procedure name="function_stat_uni_spec_with_parametr" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="xz" sqlType="numeric" precision="0" scale="0" nullable="true" jdbcType="2" type="1" index="1"/>
+        <parameter name="name" sqlType="varchar" precision="0" scale="0" nullable="true" jdbcType="12" type="5" index="2"/>
+        <parameter name="amount" sqlType="int8" precision="0" scale="0" nullable="true" jdbcType="-5" type="5" index="3"/>
+      </prototype>
+    </procedure>
+    <procedure name="function_stat_uni_student" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="name" sqlType="varchar" precision="0" scale="0" nullable="true" jdbcType="12" type="5" index="1"/>
+        <parameter name="amount" sqlType="int8" precision="0" scale="0" nullable="true" jdbcType="-5" type="5" index="2"/>
+      </prototype>
+    </procedure>
+    <procedure name="function_stat_uni_teacher" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="name" sqlType="varchar" precision="0" scale="0" nullable="true" jdbcType="12" type="5" index="1"/>
+        <parameter name="amount" sqlType="int8" precision="0" scale="0" nullable="true" jdbcType="-5" type="5" index="2"/>
+      </prototype>
+    </procedure>
+    <procedure name="function_statu_uni_fac_with_parametr" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="xz" sqlType="varchar" precision="0" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
+        <parameter name="name" sqlType="varchar" precision="0" scale="0" nullable="true" jdbcType="12" type="5" index="2"/>
+        <parameter name="amount" sqlType="int8" precision="0" scale="0" nullable="true" jdbcType="-5" type="5" index="3"/>
+      </prototype>
+    </procedure>
+    <procedure name="temp" schema="public" catalog="postgres" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="void" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+  </data-source>
+</component>

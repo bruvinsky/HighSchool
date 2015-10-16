@@ -1,0 +1,48 @@
+Bruvinsky\HighschoolBundle\Entity\Faculty:
+    type: entity
+    table: faculty
+    indexes:
+        IDX_17966043FCCF0426:
+            columns:
+                - id_uni
+        IDX_1796604360531ACB:
+            columns:
+                - id_specialty
+    id:
+        id:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 0
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        name:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+    manyToOne:
+        idUni:
+            targetEntity: Uni
+            cascade: {  }
+            fetch: LAZY
+            inversedBy: faculties_u
+            joinColumns:
+                id_uni:
+                    referencedColumnName: id
+            orphanRemoval: false
+    oneToMany:
+        departments:
+            targetEntity: Department
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: idFacultyD
+        specialties_f:
+            targetEntity: Specialty
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: idFacultySpecialty
+    lifecycleCallbacks: {  }

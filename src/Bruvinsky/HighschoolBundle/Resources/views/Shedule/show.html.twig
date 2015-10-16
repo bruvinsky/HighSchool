@@ -1,0 +1,67 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Shedule</h1>
+
+    <table class="record_properties">
+        <tbody>
+        <tr>
+            <th>Преподаватель</th>
+            <td>{{ entity.idTeacherSh }}</td>
+        </tr>
+        <tr>
+            <th>Группа</th>
+            <td>{{ entity.idGroupSh }}</td>
+        </tr>
+        <tr>
+            <th>Предмет</th>
+            <td>{{ entity.idSubjectSh }}</td>
+        </tr>
+        <tr>
+            <th>Аудитория</th>
+            <td>{{ entity.idClassroomSh }}</td>
+        </tr>
+        <tr>
+            <th>Id</th>
+            <td>{{ entity.id }}</td>
+        </tr>
+        <tr>
+            <th>Typelesson</th>
+            <td>{{ entity.typeLesson }}</td>
+        </tr>
+        <tr>
+            <th>Oddeven</th>
+            <td>{{ entity.oddEven }}</td>
+        </tr>
+        <tr>
+            <th>Weekday</th>
+            <td>{{ entity.weekday }}</td>
+        </tr>
+        <tr>
+            <th>Ntt</th>
+            <td>{{ entity.ntt }}</td>
+        </tr>
+        <tr>
+            <th>Lessondate</th>
+            <td>{{ entity.lessonDate|date('Y-m-d') }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul class="record_actions">
+        <li>
+            <a href="{{ path('shedule') }}">
+                Back to the list
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('shedule_edit', { 'id': entity.id }) }}">
+                Edit
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('shedule_show_marks', { 'id': entity.id }) }}">Просмотр оценок</a>
+        </li>
+        <li>{{ form(delete_form) }}</li>
+    </ul>
+{% endblock %}

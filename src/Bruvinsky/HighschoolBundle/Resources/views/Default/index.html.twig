@@ -1,0 +1,232 @@
+{% extends '::base.html.twig' %}
+    {% block stylesheets %}
+        <style>
+
+        </style>
+    {% endblock %}
+
+
+{% block body -%}
+    <p>В проекте:</p>
+    <ul>
+        <li>{{ regionNumber }} областей</li>
+        <li>{{ cityNumber }} городов</li>
+        <br>
+        <li>{{ uniNumber }} высших учебных заведений</li>
+        <li>{{ facultyNumber }} факультетов</li>
+        <li>{{ departmentNumber }} кафедр</li>
+        <li>{{ teacherNumber }} преподавателей</li>
+        <li>{{ studentNumber }} студентов</li>
+        <br>
+        <li>{{ sheduleNumber }} занятий</li>
+        <li>{{ marksNumber }} оценок и пропусков</li>
+    </ul>
+
+    <ul>
+        <li><a href="{{ path('stat_stud_reg') }}">
+                Распределение происхождения студентов по территории Украины
+            </a>
+        </li>
+        <li><a href="{{ path('stat_uni_reg') }}">
+                Распределение университетов по территории Украины
+            </a>
+        </li>
+        <li><a href="{{ path('stat_stud_uni_reg') }}">
+                Распределение студентов по учебным заведениям территории Украины
+            </a>
+        </li>
+        <li><a href="{{ path('stat_group_uni') }}">
+                Распределение групп по университетам
+            </a>
+        </li>
+        <li><a href="{{ path('stat_department_uni') }}">
+                Распределение кафедр по университетам
+            </a>
+        </li>
+        <li><a href="{{ path('stat_faculty_uni') }}">
+                Распределение факультетов по университетам
+            </a>
+        </li>
+    </ul>
+
+    <form>
+
+        <input type="text" name="uni" style="width: 720px;" placeholder="Введите название учебного заведения">
+
+        <select id="universityselect" size="5" style="display: none; width: 720px;"></select>
+        <select id="facultyselect" size="1" style="display: none; width: 720px; margin: 15px 0px;"></select>
+        <select id="departmentspecialtyselect" size="1" style="display: none; width: 720px; margin: 15px 0px;"></select>
+        <select id="groupselect" size="1" style="display: none; width: 720px; margin: 15px 0px;"></select>
+        <div id="students"></div>
+    </form>
+
+{% endblock %}
+
+
+{% block javascripts %}
+    <script>
+        var tmr;
+        $(function () {
+            $("input[name='uni']").keyup(function () {
+
+                var s = "";
+                clearTimeout(tmr);
+                tmr = setTimeout(function () {
+                    $.ajax({
+                        type: "POST",
+                        url: "{{ path('stat_ajax_uni') }}",
+                        dataType: 'json',
+                        data: {q: $("input[name='uni']").val()},
+                        success: function (data) {
+                            for (var key in data) {
+                                s = s + "<option value='" + key + "'>" + data[key] + "</option>";
+                            }
+                            $('#universityselect').css("display", "block");
+                            $('#universityselect').html("");
+                            $('#universityselect').html(s);
+                        }
+
+                    });
+                }, 1000);
+            }).keydown(function () {
+                clearTimeout(tmr)
+            });
+
+            $("#universityselect").change(function () {
+                $('#departmentspecialtyselect').css("display", "none");
+                $('#groupselect').css("display", "none");
+
+                var university_name = $('#universityselect :selected').text();
+
+                var university_id = $('#universityselect :selected').val();
+
+                if (university_id !== '0') {
+                    $("input[name='uni']").val(university_name);
+                    $('#universityselect').css("display", "none");
+                    $('#students').css("display", "none");
+                    $.ajax({
+                        type: "POST",
+                        url: "{{ path('stat_ajax_faculty') }}",
+                        dataType: 'json',
+                        data: {university_id: university_id},
+                        success: function (data) {
+                            var s = "<option value='0'>Выберите факультет</option>";
+                            for (var key in data) {
+                                //alert(data[key]);
+                                s = s + "<option value='" + key + "'>" + data[key] + "</option>";
+                            }
+                            $('#facultyselect').html("");
+                            $('#facultyselect').html(s);
+                        }
+
+                    });
+                    $('#p-faculty').css("display", "block");
+                    $('#facultyselect').css("display", "block");
+                }
+            });
+
+            $("#facultyselect").change(function () {
+
+                $('#p-group').css("display", "none");
+                $('#groupselect').css("display", "none");
+                $('#students').css("display", "none");
+
+                var faculty_name = $('#facultyselect :selected').text();
+
+                var faculty_id = $('#facultyselect :selected').val();
+
+                if (faculty_id !== '0') {
+                    $.ajax({
+                        type: "POST",
+                        url: "{{ path('stat_ajax_departmentspecialty') }}",
+                        dataType: 'json',
+                        data: {faculty_id: faculty_id},
+                        success: function (data) {
+
+                            var s = "<option value='0'>Выберите специальность, кафедру</option>";
+
+                            for (var key in data) {
+                                s = s + "<option value='" + key + "'>" + data[key] + "</option>";
+                            }
+
+                            $('#departmentspecialtyselect').html("");
+                            $('#departmentspecialtyselect').html(s);
+                        }
+
+                    });
+                    $('#p-specialty').css("display", "block");
+                    $('#departmentspecialtyselect').css("display", "block");
+
+                }
+            });
+
+            $("#departmentspecialtyselect").change(function () {
+                $('#students').css("display", "none");
+
+                var departmentspecialty_name = $('#departmentspecialtyselect :selected').text();
+
+                var departmentspecialty_id = $('#departmentspecialtyselect :selected').val();
+
+                if (departmentspecialty_id !== '0') {
+                    $.ajax({
+                        type: "POST",
+                        url: "{{ path('stat_ajax_group') }}",
+                        dataType: 'json',
+                        data: {departmentspecialty_id: departmentspecialty_id},
+                        success: function (data) {
+                            var s = "<option value='0'>Выберите группу студентов</option>";
+
+                            for (var key in data) {
+
+                                s = s + "<option value='" + key + "'>" + data[key] + "</option>";
+                            }
+
+                            $('#groupselect').html("");
+                            $('#groupselect').html(s);
+                        }
+
+                    });
+
+                    $('#groupselect').css("display", "block");
+
+                }
+            });
+
+            $("#groupselect").change(function () {
+
+                var group_name = $('#groupselect :selected').text();
+
+                var group_id = $('#groupselect :selected').val();
+
+                if (groupselect !== '0') {
+                    $.ajax({
+                        type: "POST",
+                        url: "{{ path('stat_ajax_students') }}",
+                        dataType: 'json',
+                        data: {group_id: group_id},
+                        success: function (data) {
+                            var s = "<ul>";
+
+                            for (var key in data) {
+                                s = s + "<li>" + data[key] + "</li>";
+                            }
+                            var s = s + "</ul>";
+                            $('#students').html("");
+                            $('#students').html(s);
+                        }
+
+                    });
+                    $('#students').css("display", "block");
+                    $('#groupselect').css("display", "block");
+
+                }
+            });
+
+
+        });
+    </script>
+{% endblock %}
+
+
+
+

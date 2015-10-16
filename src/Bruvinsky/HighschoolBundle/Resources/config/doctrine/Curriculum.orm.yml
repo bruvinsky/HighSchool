@@ -1,0 +1,75 @@
+Bruvinsky\HighschoolBundle\Entity\Curriculum:
+    type: entity
+    table: curriculum
+    indexes:
+        IDX_7BE2A7C32553970A:
+            columns:
+                - id_subject
+        IDX_7BE2A7C360531ACB:
+            columns:
+                - id_specialty
+    id:
+        id:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 0
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        lecture:
+            type: decimal
+            nullable: true
+            precision: 20
+            scale: 0
+        practical:
+            type: decimal
+            nullable: true
+            precision: 20
+            scale: 0
+        lab:
+            type: decimal
+            nullable: true
+            precision: 20
+            scale: 0
+        exam:
+            type: decimal
+            nullable: true
+            precision: 20
+            scale: 0
+        semester:
+            type: decimal
+            nullable: true
+            precision: 20
+            scale: 0
+        test:
+            type: decimal
+            nullable: true
+            precision: 20
+            scale: 0
+        quiz:
+            type: decimal
+            nullable: true
+            precision: 20
+            scale: 0
+    manyToOne:
+        idSubjectCur:
+            targetEntity: Subject
+            cascade: {  }
+            fetch: LAZY
+            inversedBy: subject_cur
+            joinColumns:
+                id_subject:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idSpecialtyCur:
+            targetEntity: Specialty
+            cascade: {  }
+            fetch: LAZY
+            inversedBy: specialty_cur
+            joinColumns:
+                id_specialty:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

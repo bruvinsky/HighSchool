@@ -1,0 +1,53 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Список студентов</h1>
+
+    <div class="count">
+        Всего:
+        {{ pagination.getTotalItemCount }}
+    </div>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>{{ knp_pagination_sortable(pagination, 'Id', 'st.id') }}</th>
+                <th{% if pagination.isSorted('st.name') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'Имя', 'st.name') }}</th>
+                {#<th>id</th>#}
+                {#<th>Name</th>#}
+                {#<th>Male</th>#}
+                {#<th>Old</th>#}
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in pagination %}
+            <tr {% if loop.index is odd %}class="color-odd-even"{% endif %}>
+                <td><a href="{{ path('student_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.name }}</td>
+                {#<td>{{ entity.male }}</td>#}
+                {#<td>{{ entity.old }}</td>#}
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('student_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
+
+    <ul>
+        <li>
+            <a href="{{ path('student_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}
