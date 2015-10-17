@@ -1,6 +1,22 @@
 ﻿highschool
 ==========
 
+The demo project on technologies PostgreSQL / Symfony2 / JavaScript
+
+Simulation system of higher education.
+
+Database consists of 15 tables (university, faculty, department, specialty, department, specialty, curriculum, subject, teacher, student, studentgroup, shedule, marks, classroom, city, region).
+
+DB is filled with test data: 200 universities in Ukraine, 2000 faculties, 8000 departments, 160K teachers, 2.7 million students, 70 million sessions, 250 million marks. The project has more than 30 PL/pgSQL functions for filling of database, 5 materialized views.
+
+The server part is written using Symfony2.
+
+It is possible to view / add / modify / delete data. Used DOCTRINE 2 ORM. To work with large volumes - direct requests to the database through DBAL, native SQL. Pagination and sorting. Customized data entry forms (including due to the large size of the database using Data Transformers).
+
+Front-end: used template TWIG + code.highcharts.com interactive maps and charts.
+
+===========
+
 Демо-проект на технологиях PostgreSQL / Symfony2 / JavaScript
 
 Моделирование системы высшей школы.
