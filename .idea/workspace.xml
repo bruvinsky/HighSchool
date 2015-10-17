@@ -26,6 +26,14 @@
         <option name="myItemId" />
         <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
       </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PostgreSQL - postgres@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="postgres.public" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
     </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
@@ -100,10 +108,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SheduleRepository.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SheduleRepository.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Entity/SheduleRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6143984">
+            <state vertical-scroll-proportion="-23.961538">
               <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding>
                 <marker date="1444986954480" expanded="true" signature="243:302" placeholder="select id, i..shedule..." />
@@ -113,6 +121,189 @@
                 <marker date="1444986954480" expanded="true" signature="2015:2102" placeholder="SELECT * FRO..student..." />
                 <marker date="1444986954480" expanded="true" signature="2058:2101" placeholder="SELECT id_gr..shedule..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DATABASE/8b063912-af6c-4a79-b33b-c668ee48e89f" pinned="false" current-in-tab="true">
+        <entry file="uml://DATABASE/8b063912-af6c-4a79-b33b-c668ee48e89f">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>DATABASE</ID>
+              <OriginalElement>8b063912-af6c-4a79-b33b-c668ee48e89f</OriginalElement>
+              <nodes>
+                <node x="465.375" y="1426.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.marks</node>
+                <node x="192.25" y="661.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.subject</node>
+                <node x="882.3522727272727" y="893.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.department_specialty</node>
+                <node x="215.0" y="1677.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.temp1name</node>
+                <node x="1166.0" y="1677.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.numberofstudent</node>
+                <node x="527.3522727272727" y="0.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.region</node>
+                <node x="1643.3522727272727" y="0.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.temp</node>
+                <node x="1133.3522727272727" y="0.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.v_student_group</node>
+                <node x="132.35227272727275" y="882.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.teacher</node>
+                <node x="0.0" y="1677.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.specialty_arhiv</node>
+                <node x="1388.3522727272727" y="0.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.v_teacher</node>
+                <node x="674.8882575757576" y="493.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.faculty</node>
+                <node x="126.23295454545462" y="1126.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.shedule</node>
+                <node x="410.0" y="1677.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.temp2name</node>
+                <node x="605.0" y="1677.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.department_arhiv</node>
+                <node x="342.35227272727275" y="816.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.curriculum</node>
+                <node x="0.0" y="482.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.classroom</node>
+                <node x="355.9545454545455" y="314.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.uni</node>
+                <node x="995.0" y="1677.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.numberofshedule</node>
+                <node x="1336.0" y="1677.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.numberofmarks</node>
+                <node x="672.3522727272727" y="882.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.student_group</node>
+                <node x="505.72159090909093" y="650.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.department</node>
+                <node x="800.0" y="1677.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.faculty_arhiv</node>
+                <node x="731.5189393939395" y="650.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.specialty</node>
+                <node x="823.8522727272727" y="1170.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.student</node>
+                <node x="517.3522727272727" y="146.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.city</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.uni" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.city">
+                  <point x="0.0" y="-59.0" />
+                  <point x="450.9545454545455" y="289.0" />
+                  <point x="564.8522727272727" y="289.0" />
+                  <point x="-47.5" y="59.0" />
+                </edge>
+                <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.shedule" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.teacher">
+                  <point x="38.75" y="-125.0" />
+                  <point x="319.9829545454546" y="1086.0" />
+                  <point x="227.35227272727275" y="1086.0" />
+                  <point x="0.0" y="59.0" />
+                </edge>
+                <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.teacher" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.subject">
+                  <point x="-47.5" y="-59.0" />
+                  <point x="179.85227272727275" y="796.0" />
+                  <point x="267.25" y="796.0" />
+                  <point x="0.0" y="37.0" />
+                </edge>
+                <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.shedule" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.subject">
+                  <point x="-38.75" y="-125.0" />
+                  <point x="242.48295454545462" y="1096.0" />
+                  <point x="113.60227272727275" y="1096.0" />
+                  <point x="113.60227272727275" y="786.0" />
+                  <point x="217.25" y="786.0" />
+                  <point x="-50.0" y="37.0" />
+                </edge>
+                <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.specialty" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.faculty">
+                  <point x="0.0" y="-48.0" />
+                  <point x="816.5189393939395" y="625.0" />
+                  <point x="802.3882575757576" y="625.0" />
+                  <point x="42.5" y="48.0" />
+                </edge>
+                <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.faculty" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.uni">
+                  <point x="0.0" y="-48.0" />
+                  <point x="759.8882575757576" y="457.0" />
+                  <point x="498.4545454545455" y="457.0" />
+                  <point x="47.5" y="59.0" />
+                </edge>
+                <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.student" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.student_group">
+                  <point x="-57.5" y="-81.0" />
+                  <point x="881.3522727272727" y="1106.0" />
+                  <point x="814.8522727272727" y="1106.0" />
+                  <point x="47.5" y="59.0" />
+                </edge>
+                <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.student_group" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.department">
+                  <point x="-47.5" y="-59.0" />
+                  <point x="719.8522727272727" y="786.0" />
+                  <point x="590.721590909091" y="786.0" />
+                  <point x="0.0" y="48.0" />
+                </edge>
+                <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.department_specialty" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.department">
+                  <point x="-42.5" y="-48.0" />
+                  <point x="924.8522727272727" y="776.0" />
+                  <point x="647.3882575757575" y="776.0" />
+                  <point x="56.66666666666663" y="48.0" />
+                </edge>
+                <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.marks" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.student">
+                  <point x="67.5" y="-103.0" />
+                  <point x="667.875" y="1401.0" />
+                  <point x="938.8522727272727" y="1401.0" />
+                  <point x="0.0" y="81.0" />
+                </edge>
+                <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.city" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.region">
+                  <point x="0.0" y="-59.0" />
+                  <point x="0.0" y="48.0" />
+                </edge>
+                <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.student_group" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.specialty">
+                  <point x="47.5" y="-59.0" />
+                  <point x="814.8522727272727" y="796.0" />
+                  <point x="816.5189393939395" y="796.0" />
+                  <point x="0.0" y="48.0" />
+                </edge>
+                <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.department_specialty" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.specialty">
+                  <point x="42.5" y="-48.0" />
+                  <point x="1009.8522727272727" y="766.0" />
+                  <point x="873.185606060606" y="766.0" />
+                  <point x="56.66666666666663" y="48.0" />
+                </edge>
+                <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.student" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.city">
+                  <point x="57.5" y="-81.0" />
+                  <point x="996.3522727272727" y="1106.0" />
+                  <point x="1062.8522727272727" y="1106.0" />
+                  <point x="1062.8522727272727" y="289.0" />
+                  <point x="659.8522727272727" y="289.0" />
+                  <point x="47.5" y="59.0" />
+                </edge>
+                <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.curriculum" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.subject">
+                  <point x="-77.5" y="-125.0" />
+                  <point x="419.85227272727275" y="786.0" />
+                  <point x="317.25" y="786.0" />
+                  <point x="50.0" y="37.0" />
+                </edge>
+                <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.shedule" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.classroom">
+                  <point x="-116.25" y="-125.0" />
+                  <point x="164.98295454545462" y="1106.0" />
+                  <point x="95.0" y="1106.0" />
+                  <point x="0.0" y="59.0" />
+                </edge>
+                <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.shedule" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.student_group">
+                  <point x="116.25" y="-125.0" />
+                  <point x="397.4829545454546" y="1106.0" />
+                  <point x="719.8522727272727" y="1106.0" />
+                  <point x="-47.5" y="59.0" />
+                </edge>
+                <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.marks" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.shedule">
+                  <point x="-67.5" y="-103.0" />
+                  <point x="532.875" y="1401.0" />
+                  <point x="281.2329545454546" y="1401.0" />
+                  <point x="0.0" y="125.0" />
+                </edge>
+                <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.department" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.faculty">
+                  <point x="0.0" y="-48.0" />
+                  <point x="590.721590909091" y="625.0" />
+                  <point x="717.3882575757576" y="625.0" />
+                  <point x="-42.5" y="48.0" />
+                </edge>
+                <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.curriculum" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.specialty">
+                  <point x="77.5" y="-125.0" />
+                  <point x="574.8522727272727" y="796.0" />
+                  <point x="759.8522727272727" y="796.0" />
+                  <point x="-56.66666666666663" y="48.0" />
+                </edge>
+                <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.classroom" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.uni">
+                  <point x="0.0" y="-59.0" />
+                  <point x="95.0" y="457.0" />
+                  <point x="403.4545454545455" y="457.0" />
+                  <point x="-47.5" y="59.0" />
+                </edge>
+                <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.teacher" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.department">
+                  <point x="47.5" y="-59.0" />
+                  <point x="274.85227272727275" y="796.0" />
+                  <point x="534.0549242424242" y="796.0" />
+                  <point x="-56.66666666666663" y="48.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.5649749023982152" x="917.0" y="886.5000000000001" />
+              <SelectedNodes>
+                <node>8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.department</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Key columns</Category>
+                <Category>Columns</Category>
+              </Categories>
             </state>
           </provider>
         </entry>
@@ -131,16 +322,6 @@
         <entry file="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Controller/FacultyController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="98.07692">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CityController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Controller/CityController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="115.96154">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -634,7 +815,7 @@
     <property name="settings.editor.selected.configurable" value="vcs.Mercurial" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/PROGRAMMING/DB/screen/diagram_phpstorm.png" />
+    <property name="last_opened_file_path" value="E:/PROGRAMMING/DB/screen" />
     <property name="FullScreen" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
@@ -736,7 +917,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.050520834" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15833333" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -770,13 +951,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Default/statStudentRegion.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-30.192308">
-          <caret line="121" column="13" selection-start-line="121" selection-start-column="13" selection-end-line="121" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Resources/views/Default/statStudentUniRegion.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-29.538462">
@@ -1204,7 +1378,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Bruvinsky/HighschoolBundle/Entity/SheduleRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6143984">
+        <state vertical-scroll-proportion="-23.961538">
           <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding>
             <marker date="1444986954480" expanded="true" signature="243:302" placeholder="select id, i..shedule..." />
@@ -1214,6 +1388,187 @@
             <marker date="1444986954480" expanded="true" signature="2015:2102" placeholder="SELECT * FRO..student..." />
             <marker date="1444986954480" expanded="true" signature="2058:2101" placeholder="SELECT id_gr..shedule..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/8b063912-af6c-4a79-b33b-c668ee48e89f">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>8b063912-af6c-4a79-b33b-c668ee48e89f</OriginalElement>
+          <nodes>
+            <node x="465.375" y="1426.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.marks</node>
+            <node x="192.25" y="661.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.subject</node>
+            <node x="882.3522727272727" y="893.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.department_specialty</node>
+            <node x="215.0" y="1677.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.temp1name</node>
+            <node x="1166.0" y="1677.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.numberofstudent</node>
+            <node x="527.3522727272727" y="0.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.region</node>
+            <node x="1643.3522727272727" y="0.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.temp</node>
+            <node x="1133.3522727272727" y="0.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.v_student_group</node>
+            <node x="132.35227272727275" y="882.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.teacher</node>
+            <node x="0.0" y="1677.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.specialty_arhiv</node>
+            <node x="1388.3522727272727" y="0.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.v_teacher</node>
+            <node x="674.8882575757576" y="493.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.faculty</node>
+            <node x="126.23295454545462" y="1126.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.shedule</node>
+            <node x="410.0" y="1677.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.temp2name</node>
+            <node x="605.0" y="1677.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.department_arhiv</node>
+            <node x="342.35227272727275" y="816.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.curriculum</node>
+            <node x="0.0" y="482.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.classroom</node>
+            <node x="355.9545454545455" y="314.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.uni</node>
+            <node x="995.0" y="1677.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.numberofshedule</node>
+            <node x="1336.0" y="1677.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.numberofmarks</node>
+            <node x="672.3522727272727" y="882.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.student_group</node>
+            <node x="505.72159090909093" y="650.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.department</node>
+            <node x="800.0" y="1677.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.faculty_arhiv</node>
+            <node x="731.5189393939395" y="650.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.specialty</node>
+            <node x="823.8522727272727" y="1170.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.student</node>
+            <node x="517.3522727272727" y="146.0">8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.city</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.uni" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.city">
+              <point x="0.0" y="-59.0" />
+              <point x="450.9545454545455" y="289.0" />
+              <point x="564.8522727272727" y="289.0" />
+              <point x="-47.5" y="59.0" />
+            </edge>
+            <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.shedule" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.teacher">
+              <point x="38.75" y="-125.0" />
+              <point x="319.9829545454546" y="1086.0" />
+              <point x="227.35227272727275" y="1086.0" />
+              <point x="0.0" y="59.0" />
+            </edge>
+            <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.teacher" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.subject">
+              <point x="-47.5" y="-59.0" />
+              <point x="179.85227272727275" y="796.0" />
+              <point x="267.25" y="796.0" />
+              <point x="0.0" y="37.0" />
+            </edge>
+            <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.shedule" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.subject">
+              <point x="-38.75" y="-125.0" />
+              <point x="242.48295454545462" y="1096.0" />
+              <point x="113.60227272727275" y="1096.0" />
+              <point x="113.60227272727275" y="786.0" />
+              <point x="217.25" y="786.0" />
+              <point x="-50.0" y="37.0" />
+            </edge>
+            <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.specialty" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.faculty">
+              <point x="0.0" y="-48.0" />
+              <point x="816.5189393939395" y="625.0" />
+              <point x="802.3882575757576" y="625.0" />
+              <point x="42.5" y="48.0" />
+            </edge>
+            <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.faculty" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.uni">
+              <point x="0.0" y="-48.0" />
+              <point x="759.8882575757576" y="457.0" />
+              <point x="498.4545454545455" y="457.0" />
+              <point x="47.5" y="59.0" />
+            </edge>
+            <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.student" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.student_group">
+              <point x="-57.5" y="-81.0" />
+              <point x="881.3522727272727" y="1106.0" />
+              <point x="814.8522727272727" y="1106.0" />
+              <point x="47.5" y="59.0" />
+            </edge>
+            <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.student_group" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.department">
+              <point x="-47.5" y="-59.0" />
+              <point x="719.8522727272727" y="786.0" />
+              <point x="590.721590909091" y="786.0" />
+              <point x="0.0" y="48.0" />
+            </edge>
+            <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.department_specialty" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.department">
+              <point x="-42.5" y="-48.0" />
+              <point x="924.8522727272727" y="776.0" />
+              <point x="647.3882575757575" y="776.0" />
+              <point x="56.66666666666663" y="48.0" />
+            </edge>
+            <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.marks" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.student">
+              <point x="67.5" y="-103.0" />
+              <point x="667.875" y="1401.0" />
+              <point x="938.8522727272727" y="1401.0" />
+              <point x="0.0" y="81.0" />
+            </edge>
+            <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.city" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.region">
+              <point x="0.0" y="-59.0" />
+              <point x="0.0" y="48.0" />
+            </edge>
+            <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.student_group" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.specialty">
+              <point x="47.5" y="-59.0" />
+              <point x="814.8522727272727" y="796.0" />
+              <point x="816.5189393939395" y="796.0" />
+              <point x="0.0" y="48.0" />
+            </edge>
+            <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.department_specialty" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.specialty">
+              <point x="42.5" y="-48.0" />
+              <point x="1009.8522727272727" y="766.0" />
+              <point x="873.185606060606" y="766.0" />
+              <point x="56.66666666666663" y="48.0" />
+            </edge>
+            <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.student" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.city">
+              <point x="57.5" y="-81.0" />
+              <point x="996.3522727272727" y="1106.0" />
+              <point x="1062.8522727272727" y="1106.0" />
+              <point x="1062.8522727272727" y="289.0" />
+              <point x="659.8522727272727" y="289.0" />
+              <point x="47.5" y="59.0" />
+            </edge>
+            <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.curriculum" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.subject">
+              <point x="-77.5" y="-125.0" />
+              <point x="419.85227272727275" y="786.0" />
+              <point x="317.25" y="786.0" />
+              <point x="50.0" y="37.0" />
+            </edge>
+            <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.shedule" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.classroom">
+              <point x="-116.25" y="-125.0" />
+              <point x="164.98295454545462" y="1106.0" />
+              <point x="95.0" y="1106.0" />
+              <point x="0.0" y="59.0" />
+            </edge>
+            <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.shedule" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.student_group">
+              <point x="116.25" y="-125.0" />
+              <point x="397.4829545454546" y="1106.0" />
+              <point x="719.8522727272727" y="1106.0" />
+              <point x="-47.5" y="59.0" />
+            </edge>
+            <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.marks" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.shedule">
+              <point x="-67.5" y="-103.0" />
+              <point x="532.875" y="1401.0" />
+              <point x="281.2329545454546" y="1401.0" />
+              <point x="0.0" y="125.0" />
+            </edge>
+            <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.department" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.faculty">
+              <point x="0.0" y="-48.0" />
+              <point x="590.721590909091" y="625.0" />
+              <point x="717.3882575757576" y="625.0" />
+              <point x="-42.5" y="48.0" />
+            </edge>
+            <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.curriculum" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.specialty">
+              <point x="77.5" y="-125.0" />
+              <point x="574.8522727272727" y="796.0" />
+              <point x="759.8522727272727" y="796.0" />
+              <point x="-56.66666666666663" y="48.0" />
+            </edge>
+            <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.classroom" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.uni">
+              <point x="0.0" y="-59.0" />
+              <point x="95.0" y="457.0" />
+              <point x="403.4545454545455" y="457.0" />
+              <point x="-47.5" y="59.0" />
+            </edge>
+            <edge source="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.teacher" target="8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.department">
+              <point x="47.5" y="-59.0" />
+              <point x="274.85227272727275" y="796.0" />
+              <point x="534.0549242424242" y="796.0" />
+              <point x="-56.66666666666663" y="48.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.5649749023982152" x="917.0" y="886.5000000000001" />
+          <SelectedNodes>
+            <node>8b063912-af6c-4a79-b33b-c668ee48e89f.table:postgres.public.department</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
         </state>
       </provider>
     </entry>
