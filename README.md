@@ -38,15 +38,21 @@ Front-end: используется шаблонизатор TWIG + интера
 
 Схема базы данных проекта:
 ![Схема базы данных](https://github.com/bruvinsky/HighSchool/raw/master/about/diagram1.png)
-Статистика. Распределение студентов по областям проживания:
-![Распределение студентов по областям проживания](https://github.com/bruvinsky/HighSchool/raw/master/about/diagram2.png)
-Статистика. Распределение факультетов по ВУЗам:
-![Распределение факультетов по ВУЗам](https://github.com/bruvinsky/HighSchool/raw/master/about/diagram3.png)
+
 Общая информация о проекте + возможность просмотра списка студентов группы (проход по структурам университет-->факультет-->специальность-кафедра-->группа реализовани ajax запросами):
 ![Общая информация о проекте](https://github.com/bruvinsky/HighSchool/raw/master/about/diagram4.png)
+
+Статистика. Распределение студентов по областям проживания:
+![Распределение студентов по областям проживания](https://github.com/bruvinsky/HighSchool/raw/master/about/diagram2.png)
+
+Статистика. Распределение факультетов по ВУЗам:
+![Распределение факультетов по ВУЗам](https://github.com/bruvinsky/HighSchool/raw/master/about/diagram3.png)
+
 Пример создания сущности ( в данном случае - студ.группы):
 ![Пример создания сущности](https://github.com/bruvinsky/HighSchool/raw/master/about/diagram5.png)
+
 Список занятий группы с возможностью просмотра оценок:
 ![Список занятий группы](https://github.com/bruvinsky/HighSchool/raw/master/about/diagram6.png)
+
 Список оценок на занятии:
 ![Список оценок на занятии](https://github.com/bruvinsky/HighSchool/raw/master/about/diagram7.png)
